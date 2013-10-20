@@ -60,8 +60,8 @@ function print(msg)
  */
 
 var scriptFail = window.setTimeout(function() {
-  print('plug.bot couldn\'t load.  Check out the "Basic Troubleshooting" section of the readme on github.com.  Chances are it\'s a simple fix.');
-}, 2000);
+  print('plug.bot couldn't load.  Check out the "Basic Troubleshooting" section of the readme on github.com.  Chances are it\'s a simple fix.');
+},);
 
 $.getScript(path + '/plugbot.js', function() {
   print('plug.bot says hello.');
