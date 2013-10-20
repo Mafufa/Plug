@@ -1,4 +1,4 @@
-var path = 'https://raw.github.com/Mafufa/Plugbot/master';
+var path = 'https://raw.github.com/Mafufa/Plug/plugbot-loader.js';
 
 function print(msg)
 
