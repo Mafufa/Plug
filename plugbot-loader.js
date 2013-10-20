@@ -1,4 +1,4 @@
-var path = 'https://raw.github.com/connergdavis/Plugbot/master';
+var path = 'https://raw.github.com/Mafufa/Plugbot/master';
 
 function print(msg)
 
