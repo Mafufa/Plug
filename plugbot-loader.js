@@ -17,13 +17,13 @@
  * TERMS OF REPRODUCTION USE
  *
  * 1. Provide a link back to the original repository (this repository), as
- *     	in, https://github.com/ConnerGDavis/Plugbot, that is well-visible
- * 		wherever the source is being reproduced.  For example, should you
- * 		display it on a website, you should provide a link above/below that
- *		which the users use, titled something such as "ORIGINAL AUTHOR".
+ *      in, https://github.com/ConnerGDavis/Plugbot, that is well-visible
+ *   wherever the source is being reproduced.  For example, should you
+ *   display it on a website, you should provide a link above/below that
+ *  which the users use, titled something such as "ORIGINAL AUTHOR".
  *
  * 2. Retain these three comments:  the GNU GPL license statement, this comment,
- * 		and that below it, that details the author and purpose.
+ *   and that below it, that details the author and purpose.
  *
  * Failure to follow these terms will result in me getting very angry at you
  * and having your software tweaked or removed if possible.  Either way, you're
@@ -60,8 +60,8 @@ function print(msg)
  */
 
 var scriptFail = window.setTimeout(function() {
-  print('plug.bot couldn\'t load.  Check out the "Basic Troubleshooting" section of the readme on github.com.  Chances are it\'s a simple fix.');
-}, 2000);
+  print('plug.bot couldn't load.  Check out the "Basic Troubleshooting" section of the readme on github.com.  Chances are it\'s a simple fix.');
+},);
 
 $.getScript(path + '/plugbot.js', function() {
   print('plug.bot says hello.');
