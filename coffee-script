@@ -690,7 +690,7 @@
  
     whyWootCommand.prototype.functionality = function() {
       var msg, nameIndex;
-      msg = "hoylmiX is the hottest guy in plug.dj";;
+      msg = "holymiX is the hottest guy in plug.dj";;
       if ((nameIndex = this.msgData.message.indexOf('@')) !== -1) {
         return API.sendChat(this.msgData.message.substr(nameIndex) + ', ' + msg);
       } else {
@@ -749,7 +749,7 @@
  
     rulesCommand.prototype.functionality = function() {
       var msg1, msg2;
-       msg1 = "1) Time Limit is 6 min and 30 seg. ";
+       msg1 = "1) Time Limit is 6 min. ";
       msg1 += "2) Don't chat in /me or /em.  ";
       msg1 += "3) Respect the admins.";
       msg1 += "4) Don't spam . ";
