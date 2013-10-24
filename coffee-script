@@ -57,7 +57,7 @@
       curates: 0
     };
  
-    settings.prototype.pupScriptUrl = 'https://raw.github.com/Mafufa/Plug/edit/master/coffee-script/';
+    settings.prototype.pupScriptUrl = 'https://raw.github.com/Mafufa/Plug/master/coffee-script/';
  
     settings.prototype.afkTime = 30 * 60 * 1000;
  
