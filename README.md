@@ -1056,7 +1056,7 @@
       undoHooks();
       API.sendChat('Arrrrrgh!');
       data.implode();
-      return API.sendChat('I'm dead');
+      return API.sendChat('Im dead');
     };
  
     return dieCommand;
@@ -1490,8 +1490,8 @@
  
     uservoiceCommand.prototype.functionality = function() {
       var msg;
-      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Submit it to our uservoice and we\'ll get started on it: http://is.gd/IzP4bA';
-      msg += ' (please don\'t ask for mod)';
+      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Submit it to our uservoice and we ll get started on it: http://is.gd/IzP4bA';
+      msg += ' (please dont ask for mod)';
       return API.sendChat(msg);
     };
  
@@ -1629,7 +1629,7 @@
               }
             }
             if (disconnectInstances.length > 0) {
-              resp = u.getUser().username + ' desconectou ' + disconnectInstances.length.toString() + ' vez';
+              resp = u.getUser().username + ' disconnected ' + disconnectInstances.length.toString() + ' times';
               if (disconnectInstances.length === 1) {
                 resp += '. ';
               } else {
@@ -1644,7 +1644,7 @@
               dcMeridian = dcHour % 12 === dcHour ? 'AM' : 'PM';
               dcTimeStr = '' + dcHour + ':' + dcMins + ' ' + dcMeridian;
               dcSongsAgo = data.songCount - recentDisconnect.songCount;
-              resp += 'Sua desconexão mais recente foi as ' + dcTimeStr + ' (' + dcSongsAgo + ' songs ago). ';
+              resp += 'Your recent dc was ' + dcTimeStr + ' (' + dcSongsAgo + ' songs ago). ';
               if (recentDisconnect.waitlistPosition !== void 0) {
                 resp += 'He was ' + recentDisconnect.waitlistPosition + ' songs';
                 if (recentDisconnect.waitlistPosition > 1) {
