@@ -65,7 +65,7 @@
       {
         interval: 5,
         offset: 0,
-        msg: "/em: Subscribe Th3dvino Vlog's http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw"
+        msg: "/em: Subscribe Th3dvino Vlogs http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw"
       },{
         interval: 5,
         offset: 0,
@@ -73,7 +73,7 @@
       },{
         interval: 9,
         offset: 0,
-        msg: "/em: Make sure that you're voting or you'll be removed from the dj booth."
+        msg: "/em: Make sure that you are voting or you will be removed from the dj booth."
       }
     ];
  
@@ -391,7 +391,7 @@
           secsLastActive = timeSinceLastActivity / 1000;
           if (user.getWarningCount() === 0) {
             user.warn();
-            _results.push(API.sendChat("@" + user.getUser().username + ", I didn't saw you voting or chating in the last 30 minutes, are you there?"));
+            _results.push(API.sendChat("@" + user.getUser().username + ", I didnt saw you voting or chating in the last 30 minutes, are you there?"));
           } else if (user.getWarningCount() === 1) {
             lastWarned = user.getLastWarning();
             timeSinceLastWarning = now.getTime() - lastWarned.getTime();
@@ -399,7 +399,7 @@
             if (timeSinceLastWarning > twoMinutes) {
               user.warn();
               warnMsg = "@" + user.getUser().username;
-              warnMsg += ", I didn't saw you chating or voting in the last 32 minutes. Vote in the last minute or i going to remove you, this is your last warning..";
+              warnMsg += ", I didnt saw you chating or voting in the last 32 minutes. Vote in the last minute or i going to remove you, this is your last warning..";
               _results.push(API.sendChat(warnMsg));
             } else {
               _results.push(void 0);
@@ -603,10 +603,10 @@
       if (msg.substring(7, 8) === "@") {
         user = r.lookupUser(msg.substr(8));
         if (user === false) {
-          API.sendChat("/em: I didn't found ' " + msg.substr(8) +  "' So, More for me! d(>_<)b ");
+          API.sendChat("/em: I didnt found ' " + msg.substr(8) +  "' So, More for me! d(>_<)b ");
           return false;
         } else {
-          return API.sendChat("/em: @" + user.username + ", @" + this.msgData.from + " rwarded you if " + this.getCookie() + ".  Enjoy!");
+          return API.sendChat("/em: @" + user.username + ", @" + this.msgData.from + " rewarded you if " + this.getCookie() + ".  Enjoy!");
         }
       }
     };
@@ -749,11 +749,15 @@
  
     rulesCommand.prototype.functionality = function() {
       var msg1, msg2;
-       msg1 = "1) Time Limit is 6 min. ";
-      msg1 += "2) Don't chat in /me or /em.  ";
+       msg1 = "1) Dont ask for fans, the message will be automatically deleted. ";
+      msg1 += "2) Dont chat in /me or /em.  ";
       msg1 += "3) Respect the admins.";
-      msg1 += "4) Don't spam . ";
-      msg1 += "5) Don't ask for position in the staff. ";
+      msg1 += "4) Dont spam. ";
+      msg1 += "5) Dont ask for position in the staff.";
+      msg1 += "6) If song gets 25 MEHs, It will be skipped by admin.";
+      msg1 += "7) This room dont allow porno and violent videos.";
+      msg1 += "8) Words who means fan are automatically deleted.";
+      msg1 += "9) Dont put songs more than 6 minutes.";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
@@ -781,7 +785,7 @@
     roomHelpCommand.prototype.functionality = function() {
       var msg1, msg2;
       msg1 = "Welcome to Absolut Lithuania room! DJ: Create a playlist and put youtube or soundcloud music. ";
-      msg1 += "If you're new on plug.dj search for your name (near the DJ Booth) and then change or name. ";
+      msg1 += "If you are new on plug.dj search for your name (near the DJ Booth) and then change or name. ";
       msg1 += "To earn points click woot. ";
       msg2 = "Have fun! if you have another question ask for an online admin ";
       API.sendChat(msg1);
@@ -886,7 +890,7 @@
  
     downloadCommand.prototype.functionality = function() {
       var msg;
-      msg = "  Be sure to subscribe Th3dvino Vlog's http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw ";
+      msg = "  Be sure to subscribe Th3dvino Vlogs http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw ";
       msg += " and Follow Th3dvino Facebook FanPage https://www.facebook.com/3dvinas ";
       msg += " ";
       return API.sendChat(msg);
@@ -1048,7 +1052,7 @@
     };
  
     dieCommand.prototype.functionality = function() {
-      API.sendChat('Don't do that!');
+      API.sendChat('Dont do that!');
       undoHooks();
       API.sendChat('Arrrrrgh!');
       data.implode();
@@ -1405,7 +1409,7 @@
             return;
           }
         }
-        API.sendChat('' + name + ' This user can't be found');
+        API.sendChat('' + name + ' This user cant be found');
       } else {
         API.sendChat('wat?');
       }
@@ -1486,8 +1490,8 @@
  
     uservoiceCommand.prototype.functionality = function() {
       var msg;
-      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Submit it to our uservoice and we\'ll get started on it: http://is.gd/IzP4bA';
-      msg += ' (please don\'t ask for mod)';
+      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Submit it to our uservoice and we will get started on it: http://is.gd/IzP4bA';
+      msg += ' (please dont ask for mod)';
       return API.sendChat(msg);
     };
  
@@ -1533,8 +1537,8 @@
  
     whyMehCommand.prototype.functionality = function() {
       var msg;
-      msg = "You and the DJ earn points f you don't meh";
-      msg += "So don't meh";
+      msg = "You and the DJ earn points f you dont meh";
+      msg += "So dont meh";
       return API.sendChat(msg);
     };
  
@@ -1648,17 +1652,17 @@
                 }
                 resp += ' before the DJ Booth';
               } else {
-                resp += 'He wasn't in the DJ Booth either in the waitlist.';
+                resp += 'He wasnt in the DJ Booth either in the waitlist.';
               }
               API.sendChat(resp);
               return;
             } else {
-              API.sendChat("" + u.getUser().username + " didn't dc.");
+              API.sendChat("" + u.getUser().username + " didnt dc.");
               return;
             }
           }
         }
-        return API.sendChat("'This user " + givenName + " can't be found'.");
+        return API.sendChat("'This user " + givenName + " cant be found'.");
       }
     };
  
@@ -1704,10 +1708,10 @@
           msg += "Your voteratio is: " + votes['positiveRatio'].toString() + ".";
           return API.sendChat(msg);
         } else {
-          return API.sendChat("This user' " + name +  " can't be found'");
+          return API.sendChat("This user' " + name +  " cant be found'");
         }
       } else {
-        return API.sendChat("Don't do that, newbie!");
+        return API.sendChat("Dont do that, newbie!");
       }
     };
  
