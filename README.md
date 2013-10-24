@@ -57,7 +57,7 @@
       curates: 0
     };
  
-    settings.prototype.pupScriptUrl = 'https://raw.github.com/Mafufa/Plug/master/';
+    settings.prototype.pupScriptUrl = 'https://raw.github.com/Mafufa/Plug/master/README.md';
  
     settings.prototype.afkTime = 30 * 60 * 1000;
  
