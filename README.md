@@ -57,7 +57,7 @@
       curates: 0
     };
  
-    settings.prototype.pupScriptUrl = 'https://raw.github.com/Mafufa/Plug/master/README.md';
+    settings.prototype.pupScriptUrl = 'https://raw.github.com/Mafufa/Plug/master/';
  
     settings.prototype.afkTime = 30 * 60 * 1000;
  
@@ -1490,8 +1490,8 @@
  
     uservoiceCommand.prototype.functionality = function() {
       var msg;
-      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Submit it to our uservoice and we will get started on it: http://is.gd/IzP4bA';
-      msg += ' (please dont ask for mod)';
+      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Submit it to our uservoice and we\'ll get started on it: http://is.gd/IzP4bA';
+      msg += ' (please don\'t ask for mod)';
       return API.sendChat(msg);
     };
  
@@ -1537,7 +1537,7 @@
  
     whyMehCommand.prototype.functionality = function() {
       var msg;
-      msg = "You and the DJ earn points f you dont meh";
+      msg = "You and the DJ earn points if you dont meh";
       msg += "So dont meh";
       return API.sendChat(msg);
     };
@@ -1662,7 +1662,7 @@
             }
           }
         }
-        return API.sendChat("'This user " + givenName + " cant be found'.");
+        return API.sendChat("'This user " + givenName + " cant be found.'");
       }
     };
  
@@ -1708,7 +1708,7 @@
           msg += "Your voteratio is: " + votes['positiveRatio'].toString() + ".";
           return API.sendChat(msg);
         } else {
-          return API.sendChat("This user' " + name +  " cant be found'");
+          return API.sendChat("'This user " + name +  " cant be found.'");
         }
       } else {
         return API.sendChat("Dont do that, newbie!");
