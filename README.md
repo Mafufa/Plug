@@ -603,7 +603,7 @@
       if (msg.substring(7, 8) === "@") {
         user = r.lookupUser(msg.substr(8));
         if (user === false) {
-          API.sendChat("/em: I didnt found ' " + msg.substr(8) +  "' So, More for me! d(>_<)b ");
+          API.sendChat("/em: I didnt found  " + msg.substr(8) +  " So, More for me! d(>_<)b ");
           return false;
         } else {
           return API.sendChat("/em: @" + user.username + ", @" + this.msgData.from + " rewarded you if " + this.getCookie() + ".  Enjoy!");
@@ -777,7 +777,7 @@
     }
  
     roomHelpCommand.prototype.init = function() {
-      this.command = '!ajuda';
+      this.command = '!help';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'featured';
     };
@@ -1191,7 +1191,7 @@
         }
       }
       if (stringstaff.length === 0) {
-        stringstaff = "No staff online at this moment :'(";
+        stringstaff = "No staff online at this moment";
       }
       return stringstaff;
     };
@@ -1302,7 +1302,7 @@
         userRemove = r.lookupUser(users[0]);
         userAdd = r.lookupUser(users[1]);
         if (userRemove === false || userAdd === false) {
-          API.sendChat('There's an error');
+          API.sendChat('Theres an error');
           return false;
         } else {
           return data.lockBooth(function() {
@@ -1318,7 +1318,7 @@
           });
         }
       } else {
-        return API.sendChat("Remove the space between the names and place \ 'for \'");
+        return API.sendChat("Remove the space between the names and place \ for \'");
       }
     };
  
@@ -1848,7 +1848,7 @@
       sender = API.getUser(chat.fromID);
       if (!sender.ambassador && !sender.moderator && !sender.owner && !sender.superuser) {
         if (!data.users[chat.fromID]["protected"]) {
-          API.sendChat("DON'T SPAM");
+          API.sendChat("DONT SPAM");
           return API.moderateDeleteChat(chat.chatID);
         } else {
           return API.sendChat("I should kick you, but we are here to have fun");
