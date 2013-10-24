@@ -63,7 +63,7 @@
  
     settings.prototype.songIntervalMessages = [
       {
-        interval: 5,
+        interval: 7,
         offset: 0,
         msg: "/em: Subscribe Th3dvino Vlogs http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw"
       },{
