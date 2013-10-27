@@ -749,7 +749,7 @@
  
     rulesCommand.prototype.functionality = function() {
       var msg1, msg2;
-       msg1 = "1) Dont ask for fanns, the message will be automatically deleted. ";
+       msg1 = "1) Dont ask for f^an, the message will be automatically deleted. ";
       msg1 += "2) Dont chat in /me or /em.  ";
       msg1 += "3) Respect the admins.";
       msg1 += "4) Dont spam. ";
