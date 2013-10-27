@@ -749,15 +749,14 @@
  
     rulesCommand.prototype.functionality = function() {
       var msg1, msg2;
-       msg1 = "1) Dont ask for fans, the message will be automatically deleted. ";
+       msg1 = "1) Dont ask for fanns, the message will be automatically deleted. ";
       msg1 += "2) Dont chat in /me or /em.  ";
       msg1 += "3) Respect the admins.";
       msg1 += "4) Dont spam. ";
       msg1 += "5) Dont ask for position in the staff.";
       msg1 += "6) If song gets 25 MEHs, It will be skipped by admin.";
       msg1 += "7) This room dont allow porno and violent videos.";
-      msg1 += "8) Words who means fan are automatically deleted.";
-      msg1 += "9) Dont put songs more than 6 minutes.";
+      msg1 += "8) Dont put songs more than 6 minutes.";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
