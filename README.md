@@ -69,7 +69,7 @@
       },{
         interval: 5,
         offset: 0,
-        msg: "/em: Follow Th3dvino Facebook FanPage https://www.facebook.com/3dvinas"
+        msg: "/em: Follow Th3dvino Facebook Page https://www.facebook.com/3dvinas"
       },{
         interval: 9,
         offset: 0,
@@ -891,7 +891,7 @@
     downloadCommand.prototype.functionality = function() {
       var msg;
       msg = "  Be sure to subscribe Th3dvino Vlogs http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw ";
-      msg += " and Follow Th3dvino Facebook FanPage https://www.facebook.com/3dvinas ";
+      msg += " and Follow Th3dvino Facebook Page https://www.facebook.com/3dvinas ";
       msg += " ";
       return API.sendChat(msg);
     };
