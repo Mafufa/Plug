@@ -1488,7 +1488,7 @@
  
     uservoiceCommand.prototype.functionality = function() {
       var msg;
-      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Submit it to our uservoice and we ll get started on it: http://is.gd/IzP4bA';
+      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Submit it to our uservoice and we will get started on it: http://is.gd/IzP4bA';
       msg += ' (please dont ask for mod)';
       return API.sendChat(msg);
     };
@@ -1536,7 +1536,7 @@
     whyMehCommand.prototype.functionality = function() {
       var msg;
       msg = "You and the DJ earn points if you dont meh";
-      msg += "So dont meh";
+      msg += " So dont meh";
       return API.sendChat(msg);
     };
  
