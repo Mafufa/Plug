@@ -65,11 +65,11 @@
       {
         interval: 7,
         offset: 0,
-        msg: "/em: Subscribe Th3dvino Vlogs http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw"
+        msg: "/em: Subscribe The3dvino Vlogs http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw"
       },{
         interval: 5,
         offset: 0,
-        msg: "/em: Follow Th3dvino Facebook Page https://www.facebook.com/3dvinas"
+        msg: "/em: Follow The3dvino Facebook Page https://www.facebook.com/3dvinas"
       },{
         interval: 9,
         offset: 0,
@@ -391,7 +391,7 @@
           secsLastActive = timeSinceLastActivity / 1000;
           if (user.getWarningCount() === 0) {
             user.warn();
-            _results.push(API.sendChat("@" + user.getUser().username + ", I didnt saw you voting or chating in the last 30 minutes, are you there?"));
+            _results.push(API.sendChat("@" + user.getUser().username + ", I didnt see you are voting or chating in the last 30 minutes, are you there?"));
           } else if (user.getWarningCount() === 1) {
             lastWarned = user.getLastWarning();
             timeSinceLastWarning = now.getTime() - lastWarned.getTime();
@@ -399,7 +399,7 @@
             if (timeSinceLastWarning > twoMinutes) {
               user.warn();
               warnMsg = "@" + user.getUser().username;
-              warnMsg += ", I didnt saw you chating or voting in the last 32 minutes. Vote in the last minute or i going to remove you, this is your last warning..";
+              warnMsg += ", I didnt see you chating or voting in the last 32 minutes. Vote in the last minute or i am going to remove you, this is your last warning..";
               _results.push(API.sendChat(warnMsg));
             } else {
               _results.push(void 0);
@@ -749,13 +749,13 @@
  
     rulesCommand.prototype.functionality = function() {
       var msg1, msg2;
-       msg1 = "1) Dont ask for f^an, the message will be automatically deleted. ";
+       msg1 = "1) Dont ask for f^an. ";
       msg1 += "2) Dont chat in /me or /em.  ";
       msg1 += "3) Respect the admins.";
       msg1 += "4) Dont spam. ";
       msg1 += "5) If song gets 25 MEHs, It will be skipped by admin.";
-      msg1 += "6) This room dont allow porno and violent videos.";
-      msg1 += "7) Dont put songs more than 6 minutes.";
+      msg1 += "6) We dont allow porno and violent videos.";
+      msg1 += "7) Songs can be no longer than 6 minutes.";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
