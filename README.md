@@ -73,7 +73,7 @@
       },{
         interval: 9,
         offset: 0,
-        msg: "/em: Nebūk afk prie dj stalo, nes kitaip būsi pašalintas iš wait list."
+        msg: "/em: Nebuk afk prie dj stalo, nes kitaip busi pasalintas is wait list."
       }
     ];
  
@@ -349,7 +349,7 @@
   })();
  
   pupOnline = function() {
-    return API.sendChat("/me: Absolut Lithuania Bot'as Prisijungė!");
+    return API.sendChat("/me: Absolut Lithuania Botas Prisijungė!");
   };
  
   populateUserData = function() {
