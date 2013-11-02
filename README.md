@@ -65,15 +65,15 @@
       {
         interval: 7,
         offset: 0,
-        msg: "/em: Subscribe The3dvino Vlogs http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw"
+        msg: "/em: Subscribinkit The3dvino Vlogus http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw"
       },{
         interval: 5,
         offset: 0,
-        msg: "/em: Follow The3dvino Facebook Page https://www.facebook.com/3dvinas"
+        msg: "/em: Followinkit The3dvino Facebook Page https://www.facebook.com/3dvinas"
       },{
         interval: 9,
         offset: 0,
-        msg: "/em: Make sure that you are voting or you will be removed from the dj booth."
+        msg: "/em: Nebūk afk prie dj stalo, nes kitaip būsi pašalintas iš wait list."
       }
     ];
  
@@ -349,7 +349,7 @@
   })();
  
   pupOnline = function() {
-    return API.sendChat("/me: Absolut Lithuania Bot Online!");
+    return API.sendChat("/me: Absolut Lithuania Bot'as Prisijungė!");
   };
  
   populateUserData = function() {
@@ -391,7 +391,7 @@
           secsLastActive = timeSinceLastActivity / 1000;
           if (user.getWarningCount() === 0) {
             user.warn();
-            _results.push(API.sendChat("@" + user.getUser().username + ", I didnt see you are voting or chating in the last 30 minutes, are you there?"));
+            _results.push(API.sendChat("@" + user.getUser().username + ", Nemačiau tavęs čia balsuojant ar kalbant 30 minučių, ar tu čia?"));
           } else if (user.getWarningCount() === 1) {
             lastWarned = user.getLastWarning();
             timeSinceLastWarning = now.getTime() - lastWarned.getTime();
@@ -399,7 +399,7 @@
             if (timeSinceLastWarning > twoMinutes) {
               user.warn();
               warnMsg = "@" + user.getUser().username;
-              warnMsg += ", I didnt see you chating or voting in the last 32 minutes. Vote in the last minute or i am going to remove you, this is your last warning..";
+              warnMsg += ", Nemačiau tavęs čia balsuojant ar kalbant jau 32 minutes. Prabalsuok per paskutinę minutę arba kitaip būsi pašalintas iš wait list, čia mano paskutinis ispėjimas..";
               _results.push(API.sendChat(warnMsg));
             } else {
               _results.push(void 0);
@@ -411,7 +411,7 @@
             if (timeSinceLastWarning > oneMinute) {
               DJs = API.getDJs();
               if (DJs.length > 0 && DJs[0].id !== user.getUser().id) {
-                API.sendChat("@" + user.getUser().username + ", You had 2 warning. Please, make sure to always stay voting.");
+                API.sendChat("@" + user.getUser().username + ", Tu turi 2 ispėjimus. Nebūk AFK!.");
                 API.moderateRemoveDJ(id);
                 _results.push(user.warn());
               } else {
@@ -603,10 +603,10 @@
       if (msg.substring(7, 8) === "@") {
         user = r.lookupUser(msg.substr(8));
         if (user === false) {
-          API.sendChat("/em: I didnt found  " + msg.substr(8) +  " So, More for me! d(>_<)b ");
+          API.sendChat("/em: Čia nėra  " + msg.substr(8) +  " Tai, daugiau liks man! d(>_<)b ");
           return false;
         } else {
-          return API.sendChat("/em: @" + user.username + ", @" + this.msgData.from + " rewarded you if " + this.getCookie() + ".  Enjoy!");
+          return API.sendChat("/em: @" + user.username + ", @" + this.msgData.from + " apdovonojo tave " + this.getCookie() + ".  Mėgaukis!");
         }
       }
     };
@@ -660,7 +660,7 @@
       } else {
         selections['artist'] = chooseRandom(arts);
       }
-     msg = "Everybody heard that song of " + selections['artist'] + " get new songs in http://youtube.com/" + selections['channels'][0] + " http://youtube.com/" + selections['channels'][1] + " ou http://youtube.com/" + selections['channels'][2];
+     msg = "Visi jau girdėjo šitą dainą " + selections['artist'] + " pasirink naujų http://youtube.com/" + selections['channels'][0] + " http://youtube.com/" + selections['channels'][1] + " ou http://youtube.com/" + selections['channels'][2];
       return API.sendChat(msg);
     };
  
@@ -690,7 +690,7 @@
  
     whyWootCommand.prototype.functionality = function() {
       var msg, nameIndex;
-      msg = "holymiX is the hottest guy in plug.dj";;
+      msg = "holymiX karščiausias vaikinas visame plug.dj :')";;
       if ((nameIndex = this.msgData.message.indexOf('@')) !== -1) {
         return API.sendChat(this.msgData.message.substr(nameIndex) + ', ' + msg);
       } else {
@@ -711,16 +711,16 @@
     }
  
     themeCommand.prototype.init = function() {
-      this.command = '!themes';
+      this.command = '!žanrai';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'featured';
     };
  
     themeCommand.prototype.functionality = function() {
       var msg1, msg2;
-      msg1 = "All kind of songs are allowed here. ";
-      msg1 += "Have fun and... ";
-      msg2 = "Enjoy! ";
+      msg1 = "Visų žanrų muzikos čia yra leidžiamos ";
+      msg1 += "Pasilinksminkit ir... ";
+      msg2 = "Mėgaukites! ";
       msg2 += "d(>.<)b ";        
       API.sendChat(msg1);
           return setTimeout((function() {
@@ -742,20 +742,20 @@
     }
  
     rulesCommand.prototype.init = function() {
-      this.command = '!rules';
+      this.command = '!taisyklės';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'featured';
     };
  
     rulesCommand.prototype.functionality = function() {
       var msg1, msg2;
-       msg1 = "1) Dont ask for f^an. ";
-      msg1 += "2) Dont chat in /me or /em.  ";
-      msg1 += "3) Respect the admins.";
-      msg1 += "4) Dont spam. ";
-      msg1 += "5) If song gets 25 MEHs, It will be skipped by admin.";
-      msg1 += "6) We dont allow porno and violent videos.";
-      msg1 += "7) Songs can be no longer than 6 minutes.";
+       msg1 = "1) Neprašykite f^an.";
+      msg1 += "2) Nerašykite per /me or /em.";
+      msg1 += "3) Gerbkite adminus.";
+      msg1 += "4) Nefloodinkit. ";
+      msg1 += "5) Jei daina surenka 25 MEH, ji yra skippinama.";
+      msg1 += "6) Mes netoleruojame video su smurtu ar porno.";
+      msg1 += "7) Dainos gali būti ne ilgesnės nei 6 min.";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
@@ -775,17 +775,17 @@
     }
  
     roomHelpCommand.prototype.init = function() {
-      this.command = '!help';
+      this.command = '!pagalba';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'featured';
     };
  
     roomHelpCommand.prototype.functionality = function() {
       var msg1, msg2;
-      msg1 = "Welcome to Absolut Lithuania room! DJ: Create a playlist and put youtube or soundcloud music. ";
-      msg1 += "If you are new on plug.dj search for your name (near the DJ Booth) and then change or name. ";
-      msg1 += "To earn points click woot. ";
-      msg2 = "Have fun! if you have another question ask for an online admin ";
+      msg1 = "Sveiki atvyke į Absolut Lithuania kambarį! DJ: Susikurkite playlist ir prisirinkite gerų dainų iš youtube arba soundcloud ";
+      msg1 += "Jei jūs naujokas plug.dj susiraskite savo vardą (Šalia DJ stalo) ir tada pasikeiskite į savo norimą vardą. ";
+      msg1 += "Norint susirinkti taškų spauskite WOOT. ";
+      msg2 = "Pasilinksminkit! Jei turite dar kažkokių klausimų, klauskite pas ADMIN ";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
@@ -805,7 +805,7 @@
     }
  
     sourceCommand.prototype.init = function() {
-      this.command = ['!autor', '!author', '!autor'];
+      this.command = ['!autoriai'];
       this.parseType = 'exact';
       return this.rankPrivelege = 'featured';
     };
@@ -836,7 +836,7 @@
  
     wootCommand.prototype.functionality = function() {
       var msg, nameIndex;
-      msg = "Edvinas the badass. :')";
+      msg = "Edvinas storas. :')";
       if ((nameIndex = this.msgData.message.indexOf('@')) !== -1) {
         return API.sendChat(this.msgData.message.substr(nameIndex) + ', ' + msg);
       } else {
@@ -857,14 +857,14 @@
     }
  
     badQualityCommand.prototype.init = function() {
-      this.command = '!bad';
+      this.command = '!bloga';
       this.parseType = 'exact';
       return this.rankPrivelege = 'bouncer';
     };
  
     badQualityCommand.prototype.functionality = function() {
       var msg;
-      msg = "This song is bad";
+      msg = "Šita daina bloga";
       return API.sendChat(msg);
     };
  
@@ -881,15 +881,15 @@
     }
  
     downloadCommand.prototype.init = function() {
-      this.command = '!al';
+      this.command = '!reklama';
       this.parseType = 'exact';
       return this.rankPrivelege = 'featured';
     };
  
     downloadCommand.prototype.functionality = function() {
       var msg;
-      msg = "  Be sure to subscribe Th3dvino Vlogs http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw ";
-      msg += " and Follow Th3dvino Facebook Page https://www.facebook.com/3dvinas ";
+      msg = "  Nepamirškite Subscribinti The3dvino Vlogų http://www.youtube.com/channel/UCrQ1R15nKw0oGoXfvD-wNsw ";
+      msg += " ir Followinti The3dvino Facebook puslapį https://www.facebook.com/3dvinas ";
       msg += " ";
       return API.sendChat(msg);
     };
@@ -928,7 +928,7 @@
         }
       }
       if (msg === '') {
-        return API.sendChat("No one is AFK");
+        return API.sendChat("Nėra AFK");
       } else {
         return API.sendChat('AFKs: ' + msg);
       }
@@ -949,7 +949,7 @@
     allAfksCommand.prototype.init = function() {
       this.command = '!allafks';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'manager';
+      return this.rankPrivelege = 'bouncer';
     };
  
     allAfksCommand.prototype.functionality = function() {
@@ -968,7 +968,7 @@
         }
       }
       if (msg === '') {
-        return API.sendChat("No one is AFK");
+        return API.sendChat("Nėra AFK");
       } else {
         return API.sendChat('AFKs: ' + msg);
       }
@@ -987,7 +987,7 @@
     }
  
     statusCommand.prototype.init = function() {
-      this.command = '!status';
+      this.command = '!statusas';
       this.parseType = 'exact';
       return this.rankPrivelege = 'bouncer';
     };
@@ -1021,13 +1021,13 @@
     }
  
     unhookCommand.prototype.init = function() {
-      this.command = '!unhook events all()';
+      this.command = '!unhook įvykius visus()';
       this.parseType = 'exact';
       return this.rankPrivelege = 'host';
     };
  
     unhookCommand.prototype.functionality = function() {
-      API.sendChat('Unhooking all events...');
+      API.sendChat('Unhooking visus įvykius...');
       return undoHooks();
     };
  
@@ -1044,17 +1044,17 @@
     }
  
     dieCommand.prototype.init = function() {
-      this.command = '!die';
+      this.command = '!mirk';
       this.parseType = 'exact';
       return this.rankPrivelege = 'cohost';
     };
  
     dieCommand.prototype.functionality = function() {
-      API.sendChat('Dont do that!');
+      API.sendChat('Nedaryk to!');
       undoHooks();
       API.sendChat('Arrrrrgh!');
       data.implode();
-      return API.sendChat('Im dead');
+      return API.sendChat('Miriau!');
     };
  
     return dieCommand;
@@ -1072,7 +1072,7 @@
     reloadCommand.prototype.init = function() {
       this.command = '!reload';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'manager';
+      return this.rankPrivelege = 'cohost';
     };
  
     reloadCommand.prototype.functionality = function() {
@@ -1097,7 +1097,7 @@
     }
  
     lockCommand.prototype.init = function() {
-      this.command = '!lock';
+      this.command = '!užrakinti';
       this.parseType = 'exact';
       return this.rankPrivelege = 'bouncer';
     };
@@ -1119,7 +1119,7 @@
     }
  
     unlockCommand.prototype.init = function() {
-      this.command = '!unlock';
+      this.command = '!atrakinti';
       this.parseType = 'exact';
       return this.rankPrivelege = 'bouncer';
     };
@@ -1141,7 +1141,7 @@
     }
  
     removeCommand.prototype.init = function() {
-      this.command = '!remove';
+      this.command = '!pašalinti';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'bouncer';
     };
@@ -1167,7 +1167,7 @@
     }
  
     staffCommand.prototype.init = function() {
-      this.command = '!staff';
+      this.command = '!adminai';
       this.parseType = 'exact';
       this.rankPrivelege = 'user';
       return window.lastActiveStaffTime;
@@ -1189,7 +1189,7 @@
         }
       }
       if (stringstaff.length === 0) {
-        stringstaff = "No staff online at this moment";
+        stringstaff = "Šiuo metų adminų nėra prisijungūsių";
       }
       return stringstaff;
     };
@@ -1224,7 +1224,7 @@
     }
  
     lockskipCommand.prototype.init = function() {
-      this.command = '!lockskip';
+      this.command = '!užrakintiskip';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'bouncer';
     };
@@ -1250,7 +1250,7 @@
     }
  
     addCommand.prototype.init = function() {
-      this.command = '!add';
+      this.command = '!pridėti';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'bouncer';
     };
@@ -1285,7 +1285,7 @@
     }
  
     swapCommand.prototype.init = function() {
-      this.command = '!swap';
+      this.command = '!apkeisti';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'bouncer';
     };
@@ -1300,15 +1300,15 @@
         userRemove = r.lookupUser(users[0]);
         userAdd = r.lookupUser(users[1]);
         if (userRemove === false || userAdd === false) {
-          API.sendChat('Theres an error');
+          API.sendChat('Kažkas netaip');
           return false;
         } else {
           return data.lockBooth(function() {
             API.moderateRemoveDJ(userRemove.id);
-            API.sendChat("Removing " + userRemove.username + "...");
+            API.sendChat("Pašalinamas " + userRemove.username + "...");
             return setTimeout(function() {
               API.moderateAddDJ(userAdd.id);
-              API.sendChat("Adding " + userAdd.username + "...");
+              API.sendChat("Pridedamas " + userAdd.username + "...");
               return setTimeout(function() {
                 return data.unlockBooth();
               }, 1500);
@@ -1316,7 +1316,7 @@
           });
         }
       } else {
-        return API.sendChat("Remove the space between the names and place \ for \'");
+        return API.sendChat("Palik tarpą tarp vardų ir tada \ į \'");
       }
     };
  
@@ -1391,7 +1391,7 @@
     resetAfkCommand.prototype.init = function() {
       this.command = '!resetafk';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'cohost';
     };
  
     resetAfkCommand.prototype.functionality = function() {
@@ -1403,13 +1403,13 @@
           u = _ref22[id];
           if (u.getUser().username === name) {
             u.updateActivity();
-            API.sendChat('@' + u.getUser().username + ' Your AFK status is reloaded.');
+            API.sendChat('@' + u.getUser().username + ' Tavo AFK statusas atstatytas.');
             return;
           }
         }
-        API.sendChat('' + name + ' This user cant be found');
+        API.sendChat('' + name + ' Tokio vardo nėra');
       } else {
-        API.sendChat('wat?');
+        API.sendChat('Ką?');
       }
     };
  
@@ -1438,8 +1438,8 @@
         param = msg.substr(11);
         if (param === 'Ativar') {
           data.forceSkip = true;
-          return API.sendChat("Online.");
-        } else if (param === 'Offline') {
+          return API.sendChat("Įjungtas.");
+        } else if (param === 'Išjungtas') {
           data.forceSkip = false;
           return API.sendChat("On.");
         }
@@ -1465,7 +1465,7 @@
     };
  
     overplayedCommand.prototype.functionality = function() {
-      return API.sendCha("I think not");
+      return API.sendCha("Nemanau");
     };
  
     return overplayedCommand;
@@ -1481,15 +1481,15 @@
     }
  
     uservoiceCommand.prototype.init = function() {
-      this.command = ['/uservoice()', '/idea()'];
+      this.command = '!idėja';
       this.parseType = 'exact';
       return this.rankPrivelege = 'cohost';
     };
  
     uservoiceCommand.prototype.functionality = function() {
       var msg;
-      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Submit it to our uservoice and we will get started on it: http://is.gd/IzP4bA';
-      msg += ' (please dont ask for mod)';
+      msg = 'Turi idėjų mūsų botui ar kambariui?? Šaunu! Susisiek su kažkuriuo adminų ir papasakok viską.;
+      msg += ' (Prašome neprašyti adminų)';
       return API.sendChat(msg);
     };
  
@@ -1506,7 +1506,7 @@
     }
  
     skipCommand.prototype.init = function() {
-      this.command = '!skip';
+      this.command = '!kita';
       this.parseType = 'exact';
       return this.rankPrivelege = 'bouncer';
     };
@@ -1535,8 +1535,8 @@
  
     whyMehCommand.prototype.functionality = function() {
       var msg;
-      msg = "You and the DJ earn points if you dont meh";
-      msg += " So dont meh";
+      msg = "Jei tu spaudi MEH DJ ir tu negaunate taškų";
+      msg += "Taip kad nespauskite MEH";
       return API.sendChat(msg);
     };
  
@@ -1553,7 +1553,7 @@
     }
  
     commandsCommand.prototype.init = function() {
-      this.command = '!commands';
+      this.command = '!komandos';
       this.parseType = 'exact';
       return this.rankPrivelege = 'bouncer';
     };
@@ -1603,7 +1603,7 @@
     }
  
     disconnectLookupCommand.prototype.init = function() {
-      this.command = '!dclookup';
+      this.command = '!pažiurim';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'bouncer';
     };
@@ -1627,7 +1627,7 @@
               }
             }
             if (disconnectInstances.length > 0) {
-              resp = u.getUser().username + ' disconnected ' + disconnectInstances.length.toString() + ' times';
+              resp = u.getUser().username + ' atsijungė ' + disconnectInstances.length.toString() + ' kartus';
               if (disconnectInstances.length === 1) {
                 resp += '. ';
               } else {
@@ -1642,15 +1642,15 @@
               dcMeridian = dcHour % 12 === dcHour ? 'AM' : 'PM';
               dcTimeStr = '' + dcHour + ':' + dcMins + ' ' + dcMeridian;
               dcSongsAgo = data.songCount - recentDisconnect.songCount;
-              resp += 'Your recent dc was ' + dcTimeStr + ' (' + dcSongsAgo + ' songs ago). ';
+              resp += 'Tavo atsijungimas buvo prieš ' + dcTimeStr + ' (' + dcSongsAgo + ' dainas.). ';
               if (recentDisconnect.waitlistPosition !== void 0) {
-                resp += 'He was ' + recentDisconnect.waitlistPosition + ' songs';
+                resp += 'Jis buvo ' + recentDisconnect.waitlistPosition + ' dainas';
                 if (recentDisconnect.waitlistPosition > 1) {
                   resp += '';
                 }
-                resp += ' before the DJ Booth';
+                resp += ' prieš DJ stalą';
               } else {
-                resp += 'He wasnt in the DJ Booth either in the waitlist.';
+                resp += 'Jis nebuvo prie DJ stalo';
               }
               API.sendChat(resp);
               return;
@@ -1660,7 +1660,7 @@
             }
           }
         }
-        return API.sendChat("'This user " + givenName + " cant be found.'");
+        return API.sendChat("'Šis žmogus vardu " + givenName + " nerastas'");
       }
     };
  
@@ -1706,10 +1706,10 @@
           msg += "Your voteratio is: " + votes['positiveRatio'].toString() + ".";
           return API.sendChat(msg);
         } else {
-          return API.sendChat("'This user " + name +  " cant be found.'");
+          return API.sendChat("'Šis žmogus vardu " + name +  " nerastas.'");
         }
       } else {
-        return API.sendChat("Dont do that, newbie!");
+        return API.sendChat("Nedaryk to, naujoke!!");
       }
     };
  
@@ -1849,7 +1849,7 @@
           API.sendChat("DONT SPAM");
           return API.moderateDeleteChat(chat.chatID);
         } else {
-          return API.sendChat("I should kick you, but we are here to have fun");
+          return API.sendChat("Turėčiau dabar tave iškickinti, bet pasilinksmink.");
        }
       }
     }
