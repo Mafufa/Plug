@@ -349,7 +349,7 @@
   })();
  
   pupOnline = function() {
-    return API.sendChat("/me: Absolut Lithuania Botas Prisijungė!");
+    return API.sendChat("/me: Absolut Lithuania Botas Prisijunge!");
   };
  
   populateUserData = function() {
